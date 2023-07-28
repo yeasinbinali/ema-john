@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo/ema-john_logo.png";
+import user from "../../images/user.png";
 
 const Header = () => {
   const orderCarts = useSelector((state) => state.cart);
@@ -16,8 +17,8 @@ const Header = () => {
     shipping = shipping + parseFloat(cart.shipping);
   }
 
-  // const totalPrice = total.toFixed(2);
-  // const totalShipping = shipping.toFixed(2);
+  const totalPrice = total.toFixed(2);
+  const totalShipping = shipping.toFixed(2);
   const tax = (total * 0.1).toFixed(2);
   const grandTotal = total + parseFloat(shipping) + parseFloat(tax);
   return (
@@ -25,7 +26,7 @@ const Header = () => {
       <img className="w-1/3 mx-auto my-6" src={logo} alt="logo" />
       <div className="navbar sticky top-0" style={{ background: "#ff8c00" }}>
         <div className="flex-1">
-          <Link to="/" className="text-xl font-bold text-white ml-4 md:ml-10">
+          <Link to="/" className="text-xl font-bold text-white ml-0 md:ml-10">
             Shop
           </Link>
           <Link to="/inventory" className="ml-5 text-xl font-bold text-white">
@@ -63,7 +64,20 @@ const Header = () => {
                 <span className="font-bold text-lg">
                   Cart: {orderCarts.length}
                 </span>
-                <span className="text-info">{grandTotal.toFixed(2)}</span>
+                <div className='flex justify-between'>
+                  <div>
+                    <h5>Subtotal: </h5>
+                    <h5>Tax(10%)</h5>
+                    <h5>Shipping: </h5>
+                    <h5 className='font-bold'>Grand Total: </h5>
+                  </div>
+                  <div>
+                    <h5>{totalPrice}</h5>
+                    <h5>{tax}</h5>
+                    <h5>{totalShipping}</h5>
+                    <h5 className='font-bold'>{grandTotal.toFixed(2)}</h5>
+                  </div>
+                </div>
                 <div className="card-actions">
                   <button
                     style={{ background: "#ff8c00" }}
@@ -77,8 +91,8 @@ const Header = () => {
           </div>
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src={logo} alt="" />
+              <div className="w-8 h-8 rounded-full">
+                <img src={user} alt="" />
               </div>
             </label>
             <ul

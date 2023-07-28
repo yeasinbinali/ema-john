@@ -1,7 +1,7 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../actionTypes/actionTypes";
 
 const initialState = {
-  cart: []
+  cart: [],
 };
 
 const productReducer = (state = initialState, action) => {
@@ -12,7 +12,12 @@ const productReducer = (state = initialState, action) => {
         cart: [...state.cart, action.payload],
       };
     case REMOVE_FROM_CART:
-      return {};
+      return {
+        ...state,
+        cart: state.cart.filter(
+          (product) => product.ratingsCount !== action.payload.ratingsCount
+        ),
+      };
     default:
       return state;
   }
