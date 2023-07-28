@@ -5,7 +5,7 @@ import OrderCart from './OrderCart';
 const Cart = () => {
     const orderCarts = useSelector((state) => state.cart);
     return (
-        <div>
+        <div className='ml-4 md:ml-10 mt-5 md:mt-2'>
             {
                 orderCarts.map(orderCart => <OrderCart
                     orderCart={orderCart}

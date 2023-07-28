@@ -1,3 +1,5 @@
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
@@ -30,6 +32,7 @@ const Product = ({ product }) => {
             className="btn btn-sm text-white"
             onClick={() => dispatch(addToCart(product))}
           >
+            <FontAwesomeIcon icon={faCartPlus} />
             Add to Cart
           </button>
           <Link to={`/product/${_id}`}>
