@@ -1,14 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo/ema-john_logo.png";
 
 const Header = () => {
+  const orderCart = useSelector((state) => state.cart);
+  console.log(orderCart.length);
   return (
     <div>
       <img className="w-1/2 mx-auto my-6" src={logo} alt="logo" />
-        <div className="navbar" style={{background: '#ff8c00'}}>
+        <nav className="navbar" style={{background: '#ff8c00'}}>
           <div id='nav-link' className="flex-1">
-            <Link to='/' className='text-xl font-bold text-white ml-4'>Shop</Link>
+            <Link to='/' className='text-xl font-bold text-white ml-4 md:ml-10'>Shop</Link>
             <Link to='/inventory' className='ml-5 text-xl font-bold text-white'>Inventory</Link>
           </div>
           <div className="flex-none">
@@ -29,7 +32,7 @@ const Header = () => {
                       d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                     />
                   </svg>
-                  <span className="badge badge-sm indicator-item">8</span>
+                  <span className="badge badge-sm indicator-item">{orderCart.length}</span>
                 </div>
               </label>
               <div
@@ -37,11 +40,11 @@ const Header = () => {
                 className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
               >
                 <div className="card-body">
-                  <span className="font-bold text-lg">8 Items</span>
+                  <span className="font-bold text-lg">Cart: {orderCart.length}</span>
                   <span className="text-info">Subtotal: $999</span>
                   <div className="card-actions">
-                    <button className="btn btn-primary btn-block">
-                      View cart
+                    <button style={{background: '#ff8c00'}} className="btn btn-block text-white">
+                      <Link to='/cart'>View Cart</Link>
                     </button>
                   </div>
                 </div>
@@ -72,7 +75,7 @@ const Header = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </nav>
       </div>
   );
 };
