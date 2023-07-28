@@ -8,7 +8,7 @@ const Header = () => {
       <img className="w-1/2 mx-auto my-6" src={logo} alt="logo" />
         <div className="navbar" style={{background: '#ff8c00'}}>
           <div id='nav-link' className="flex-1">
-            <Link to='/' className='text-xl font-bold text-white'>Shop</Link>
+            <Link to='/' className='text-xl font-bold text-white ml-4'>Shop</Link>
             <Link to='/inventory' className='ml-5 text-xl font-bold text-white'>Inventory</Link>
           </div>
           <div className="flex-none">

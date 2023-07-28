@@ -259,7 +259,7 @@
                 "value": "Intel"
             }
         ],
-        "price": 1,
+        "price": 1780,
         "shipping": 7.99
     },
     {
@@ -567,7 +567,7 @@
         "stock": 57,
         "quantity": 0,
         "ratings": 3,
-        "ratingsCount": 3972,
+        "ratingsCount": 397,
         "img": "https://images-na.ssl-images-amazon.com/images/I/41zfabBnrLL._AC_US218_.jpg",
         "url": "https://www.amazon.com/Dell-Inspiron-Gaming-Laptop-i5577-7359BLK-PUS/dp/B06XFGF7SN/ref=sr_1_18?s=electronics&ie=UTF8&qid=1499124890&sr=1-18&keywords=laptop",
         "features": [
@@ -2422,7 +2422,7 @@
         "price": 132,
         "stock": 1,
         "ratings": 3,
-        "ratingsCount": 128,
+        "ratingsCount": 12,
         "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/12cf12ac1c8e484ea487ad6400ee3444_9366/Terrex_Free_Hiker_Gore-Tex_Hiking_Shoes_Black_GZ0355_01_standard.jpg",
         "shipping": 13,
         "quantity": 0
@@ -2854,7 +2854,7 @@
         "price": 24,
         "stock": 9,
         "ratings": 5,
-        "ratingsCount": 15,
+        "ratingsCount": 90,
         "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/aaa5ae549c624178bc25a740012dd61f_9366/Relaxed_Strap-Back_Hat_White_BH7135_01_standard.jpg",
         "shipping": 6,
         "quantity": 0
@@ -3046,7 +3046,7 @@
         "price": 26,
         "stock": 20,
         "ratings": 5,
-        "ratingsCount": 83,
+        "ratingsCount": 777,
         "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/e2d870a680644e4d98e9ac7d0008ecc7_9366/Steel_Metal_Bottle_600_ML_Yellow_EX7307_01_standard.jpg",
         "shipping": 6,
         "quantity": 0
@@ -3058,7 +3058,7 @@
         "price": 39,
         "stock": 20,
         "ratings": 3,
-        "ratingsCount": 1,
+        "ratingsCount": 5,
         "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/77ad16764abf4e828560ad44001cd640_9366/Squad_Glass_Bottle_720_ML_Black_FZ7115_01_standard.jpg",
         "shipping": 5,
         "quantity": 0
