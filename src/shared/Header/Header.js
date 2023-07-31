@@ -6,7 +6,6 @@ import user from "../../images/user.png";
 
 const Header = () => {
   const orderCarts = useSelector((state) => state.cart);
-  console.log(orderCarts);
   let total = 0;
   // let quantity = 0;
   let shipping = 0;

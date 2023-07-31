@@ -11,7 +11,7 @@ const Shop = () => {
   }, []);
 
   return (
-    <div>
+    <div className='ml-0 md:ml-10 mt-5 md:mt-2'>
       {products.map((product) => (
         <Product key={product.ratingsCount} product={product}></Product>
       ))}

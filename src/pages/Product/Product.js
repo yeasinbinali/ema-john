@@ -9,16 +9,16 @@ const Product = ({ product }) => {
   const { name, seller, price, ratings, stock, img, category, _id } = product;
   const dispatch = useDispatch();
   return (
-    <div className="flex items-center ml-0 md:ml-10 mt-5 md:mt-2">
-      <img className="w-32 md:w-60" src={img} alt="img-failed"></img>
+    <div className="flex items-center">
+      <img className="w-32 md:w-52 lg:w-60" src={img} alt="img-failed"></img>
       <div className="ml-4">
         <div>
-          <h2 className="text-xs m-0 md:text-2xl font-bold">
-            {name.substring(0, 50)}
+          <h2 className="m-0 font-bold" style={{fontSize: '16px'}}>
+            {name.substring(0,70)}
           </h2>
-          <p className="m-0 text-xs md:text-xl">
+          <small className="m-0">
             Company: <b>{seller}</b> | Category: <b>{category}</b>
-          </p>
+          </small>
           <p className="text-md md:text-3xl my-0 md:my-1 lg:my-2 font-extrabold">
             <b>${price}</b>
           </p>
